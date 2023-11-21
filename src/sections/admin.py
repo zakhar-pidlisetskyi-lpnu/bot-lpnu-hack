@@ -214,7 +214,7 @@ class AdminSection(Section):
 
         receivers_count = 0
         for member in team.members:
-            self.bot.send_photo(member.chat_id, 'https://i.ibb.co/Q6HMJYt/Frame-98.png')
+            self.bot.send_photo(member.chat_id, 'https://i.ibb.co/J3p243s/Frame-79.png')
             receivers_count += 1
 
         self.bot.send_message(
@@ -233,11 +233,11 @@ class AdminSection(Section):
         if is_approved:
             team.test_task_passed = True
             admin_text = f"Команда {team.name} бере участь в хакатоні!"
-            team_photo = "https://i.ibb.co/Q6HMJYt/Frame-98.png"
+            team_photo = "https://i.ibb.co/J3p243s/Frame-79.png"
         else:
             team.test_task_passed = False
             admin_text = f"Команда {team.name} не братиме участь в хакатоні!"
-            team_photo = "https://i.ibb.co/64Q0WzK/Frame-97.png"
+            team_photo = "https://i.ibb.co/J3p243s/Frame-79.png"
 
         team.save()
 
