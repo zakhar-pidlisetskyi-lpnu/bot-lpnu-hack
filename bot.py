@@ -78,6 +78,20 @@ def handle_text_buttons(message):
 
         elif message_text == "SilentUpdate":
             updater.update_menu_from_db()
+            users = User.objects.filter(is_blocked=False)
+        
+            # participants = filter(lambda user: user.is_participant, users)
+            counter = 0
+            for u in users:
+                try:
+                    data.hackathon.current_menu.send_menu(bot, u)
+                    counter += 1
+                except Exception as e:
+                    print(
+                        f"[Updater] ERROR while menu update for {user.username} - {e}"
+                    )
+        
+            print(f"Updated - {counter}/{len(users)}")
 
         elif message_text == "__adminaccess":
             admin_section.send_admin_menu(user)
