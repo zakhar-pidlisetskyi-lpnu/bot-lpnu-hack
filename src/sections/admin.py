@@ -214,6 +214,7 @@ class AdminSection(Section):
 
         receivers_count = 0
         for member in team.members:
+            self.bot.send_message(member.chat_id, text=admin_text)
             self.bot.send_photo(member.chat_id, 'https://i.ibb.co/J3p243s/Frame-79.png')
             receivers_count += 1
 
