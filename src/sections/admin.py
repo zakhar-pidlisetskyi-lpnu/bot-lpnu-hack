@@ -416,11 +416,11 @@ class AdminSection(Section):
         )
         markup.add(start_hack_btn, end_hack_btn)
         forward_hack_btn = InlineKeyboardButton(
-            text="suka Forward",
+            text="Section Forward",
             callback_data=self.form_admin_callback(action="Forward", delete=True),
         )
         back_hack_btn = InlineKeyboardButton(
-            text="suka Back",
+            text="Section Back",
             callback_data=self.form_admin_callback(action="Back", delete=True),
         )
         markup.add(back_hack_btn, forward_hack_btn)
