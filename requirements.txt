@@ -1,0 +1,6 @@
+pyTelegramBotAPI == 3.7.6
+pymongo == 3.11.2
+dnspython == 2.0.0
+mongoengine == 0.23.0
+configparser == 5.0.2
+telegraph == 1.4.1
